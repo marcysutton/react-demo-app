@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Button = styled.button`
+const Button = styled.span`
     color: #fff;
+    display: inline-block;
     position: relative;
     font-size: 16px;
     padding: 10px;

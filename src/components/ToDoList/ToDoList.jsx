@@ -34,7 +34,7 @@ const InputForm = styled.form`
     }
 `
 
-export default class ToDoListContainer extends Component {
+export default class ToDoList extends Component {
 
     state = {
         toDoItems: [],
@@ -69,12 +69,12 @@ export default class ToDoListContainer extends Component {
 
     render() {
         return (
-            <Container>
+            <Container testId="test-todolist">
                 <InputForm onSubmit={this.handleSubmit}>
-                    <InputText value ={this.state.inputText} onChange={this.updateInput} />
-                    <Button disabled={this.state.submitDisabled} type="submit">Add</Button>
+                    <InputText value ={this.state.inputText} onChange={this.updateInput} testId="test-input" />
+                    <Button disabled={this.state.submitDisabled} type="submit" testId="test-button">Add</Button>
                 </InputForm>
-                <List items={this.state.toDoItems} removeItem={this.delToDo} />
+                <List items={this.state.toDoItems} removeItem={this.delToDo} testId="test-itemlist" />
             </Container>
         )
     }
